@@ -25,7 +25,7 @@ def max_filter(df):
 
     #depending of the csv and desired columns, the slice will change.
     col = header[36:] #getting the all desired columns to transform in a dict with their index (Cell_Type)
-    col = header[2:] #directly from test_predict.csv form EpiAtlas
+    #col = header[2:] #directly from test_predict.csv form EpiAtlas
     dict_col = {k:v for k,v in enumerate(col)} #index as keys and col names as values
     
 

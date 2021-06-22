@@ -3,7 +3,7 @@ Scripts to manipulate csv files with predicted information (i.e EpiLaP)
 
 # Requirements
 
-```python 3``` and ```install pandas library in your virtual env```
+```python 3``` and ```install requirements.txt in your env```
 
 - webscrp_cell_tissue_type.py
 
@@ -75,3 +75,8 @@ optional arguments:
   -o OUT, --out OUT     Path to the final csv file with the new column
   ```
   
+  - webscp_histones_epirr_count.py
+
+  From a list of EpiRR, this script will count how many samples exist per histone (H3K27ac, H3K27me3, H3K36me3, H3K4me1, H3K4me3, H3K9me3, Others).
+
+  Usage: python webscp_histones_epirr_count.py list_epirr.txt > results.csv

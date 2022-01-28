@@ -1,13 +1,9 @@
-import argparse
-import pandas as pd
 import urllib.request
 import lxml.html as lh
 from bs4 import BeautifulSoup
 import requests
 from time import sleep
 #from retry import retry
-import os
-import sys
 from tqdm import tqdm 
 
 

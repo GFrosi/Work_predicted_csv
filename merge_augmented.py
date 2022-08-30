@@ -3,25 +3,21 @@ import argparse
 
 
 def load_df(file_csv):
-    
-    '''load a dataframe from a csv file'''
+    '''load a dataframe
+    from a csv file'''
 
-    df = pd.read_csv(file_csv)
-        
-    return df
+    return pd.read_csv(file_csv)
 
 
 def merge_dfs(df1, df2):
-    '''This function receives two dataframes and returns a merged dataframe will all rows'''
+    '''This function receives two dataframes.
+    Returns a merged dataframe including
+    all rows'''
 
-
-    df3 = df1.merge(df2,how='left', left_on='MD5', right_on='MD5')
-    # df3 = df1.merge(df2,how='left', left_on='MD5', right_on='MD5')
-    return df3
+    return df1.merge(df2,how='left', left_on='MD5', right_on='MD5')
 
 
 def save_df(df, path):
-
     '''Save df as csv file'''
               
     df.to_csv(path, index = False)
@@ -32,8 +28,6 @@ def main():
 
     df1 = load_df(args.file)
     df2 = load_df(args.FILE)
-    # print(df1.head())
-    # print(df2.head())
     df3 = merge_dfs(df1, df2)
     save_df(df3, args.out)
 
@@ -50,6 +44,3 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main()
-
-
-#I will need to adjust this code to do a merge in three dfs, or just call the merge function twice.
